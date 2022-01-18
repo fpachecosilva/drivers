@@ -2118,7 +2118,47 @@ const miniPcData = [
                 return myHTML
             }
 
+        },
+
+        {
+            name: 'NUC 10ª Geração',
+            id: '45',
+            cod: '',
+            cat: 'minipc',
+            tipo: 'antigo',
+            desc: '',
+            img: 'assets/img/nuc10.png',
+            linksArray: [
+                {
+                    link: '',
+                    desklink: ''
+                }
+
+            ],
+
+            datasheetsArray: [
+                {
+                    link: 'https://drive.google.com/uc?export=download&id=1C4IviZBQYP_KZzEiOfGJ5qDw4T8piGJI',                    
+                    deskdatasheet: 'NUC 10ª geração.pdf'
+                }
+            ],
+
+
+            get drivers() {
+                arr = this.linksArray;
+                let myHTML = '';
+                arr.forEach(links => myHTML += `<li><a href="${links.link}" target='_blank'> ${links.desklink} </a></li>`);
+                return myHTML
+            },
+
+            get datasheets() {
+                arr = this.datasheetsArray;
+                let myHTML = '';
+                arr.forEach(datasheets => myHTML += `<li><a href="${datasheets.link}" target='_blank'> ${datasheets.deskdatasheet} </a></li>`);
+                return myHTML
         }
+
+    }
 
 ];
 
