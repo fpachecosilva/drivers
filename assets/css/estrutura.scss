@@ -1,0 +1,285 @@
+
+
+@import '_reset';
+@import '_variaveis';
+
+
+header {
+    height: 300px;
+    background-size: cover;
+    background-image: url('../img/header.jpg');
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .pelicula {
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        z-index: 3;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+        background: rgb(8,8,8);
+        background: linear-gradient(0deg, rgba(8,8,8,0.6727065826330532) 0%, rgba(173,0,0,0.5130427170868348) 100%);
+    }
+    
+
+    .logo {
+            width: 180px;
+            height: 180px;
+            background-size: contain;
+            background-image: url(../img/logo.png);
+            padding: 20px;
+            box-sizing: border-box;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-left: 50px;
+            z-index: 1;
+
+        a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 1;
+        }
+    }
+
+    .textos {
+        margin-left: 50px;
+        z-index: 1;
+    }
+
+    .topoDesc {
+        font-size: 35px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .social {
+        p {
+            margin-left: 7px;
+            font-size: 22px;
+        }
+
+        a {
+            border: 1px solid #ffffff82;
+            border-radius: 40px;
+            background-color: #0000008a;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            box-sizing: border-box;
+            padding: 8px 15px;
+            color: greenyellow;
+
+            &:active {
+                color: #fff;
+            }
+
+            svg {
+                color: #fff;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: auto;
+}
+
+#boxes {
+    box-sizing: border-box;
+    padding: 20px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: center;
+    max-width: 1440px;
+    text-align: center;
+    margin: auto;
+}
+
+.produto {
+    background-color: var(--bgcinza2);
+    max-width: 280px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: var(--margin);    
+    margin: 15px;
+}
+
+.box {
+    .titulo {
+        color: var(--terciaria);
+        text-transform: uppercase;
+        font-size: 22px;
+    }
+
+    .cod {
+        color: #636363;
+        text-transform: uppercase;
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+    .desc {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .preco {
+        font-size: 28px;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+}
+
+.pedido {    
+    width: 200px;
+    height: 50px;
+    background-color: #0cb946;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: auto;
+    margin-top: 22px;
+    text-decoration: none;
+    color: #fff;
+
+    .fa-whatsapp {
+        margin-right: 10px;
+    }
+}
+
+.adicionais {
+    box-sizing: border-box;
+    padding: 20px 50px;    
+}
+
+.zap {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+
+    svg {
+        color: #fff;
+        font-size: 55px;
+        z-index: 2;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 57px;
+        height: 57px;
+        background-color: #39ab0f;
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+        bottom: 0;
+        left: -4px;
+    }
+}
+
+
+// MOBILE =====================================================================
+@media screen and (max-width: 728px) {
+
+    header {
+        display: block;
+        text-align: center;
+        height: 365px;
+        z-index: 0;
+        padding-top: 30px;
+
+        .pelicula {
+            height: 365px;
+            z-index: -1;
+        }
+
+        .logo {
+            margin: auto;
+        }
+
+        .topoDesc {
+            font-size: 22px;
+        }
+
+        .textos {
+            padding: 30px;
+            margin-left: initial;
+            z-index: 1;
+        }
+
+        .social {
+            p {
+                font-size: initial;
+            }
+
+            a {
+                padding: 5px 10px;
+
+                svg {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    #boxes {
+        display: block;
+        padding: 15px;
+    }
+
+    .produto {
+        margin: 20px auto;
+        padding: 22px;
+    }
+
+    .box {        
+        .desc {
+            margin-top: 10px;
+            font-size: 13px;
+            line-height: 18px;
+        }
+
+        .preco {
+            margin-top: 13px;
+        }
+    }
+
+    .adicionais {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 15px;
+    }
+
+    // .zap {
+    //     svg {
+    //         right: 33px;
+    //         bottom: 15px;
+    //         font-size: 45px;
+    //     }
+
+    //     &::after {
+    //         width: 48px;
+    //         height: 48px;
+    //         bottom: 13px;
+    //         right: 29px;
+    //     }
+    // }
+
+}

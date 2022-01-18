@@ -1,0 +1,53 @@
+/* Variaveis: */
+:root {
+    --principal: #000;
+    --secundaria:#008bdb;
+    --terciaria:#a8a8a8;
+    --bg: #FFF;
+    --bgcinza2: #171717;
+
+    --margin: 30px;
+    --tempo: 500ms;
+    --radius: 10px;
+    --shadow: 2px 3px 6px 2px #00000087;
+}
+/* Variaveis: */
+
+
+/* Seleção: */
+::selection {
+    background: var(--secundaria);
+    color: var(--terciaria);
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-selection {
+    background: var(--secundaria);
+    color: var(--terciaria);
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-moz-selection {
+    background: var(--secundaria);
+    color: var(--terciaria);
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Seleção: */
+
+
+/* Efeitos de transição: */
+a, ul, li, .link-abre, nav, .menu, section, .produto, .zap, #boxes {
+    -webkit-transition: all var(--tempo);
+    -moz-transition: all var(--tempo);
+    -ms-transition: all var(--tempo);
+    -o-transition: all var(--tempo);
+    transition: all var(--tempo);
+}
+/* :Efeitos de transição */
+
+
+
+
+
+
+
